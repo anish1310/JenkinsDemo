@@ -32,6 +32,7 @@
   <target name="deploy">
     <!-- Upload the contents of the "src" directory, running the tests for just 1 class -->
     <echo>Current GIT Commit : ${env.GIT_COMMIT}</echo>
+    <gitShow/>
     <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="src" rollbackOnError="true" autoUpdatePackage="true"></sf:deploy>
   </target>
 
